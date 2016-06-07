@@ -16,7 +16,6 @@ $(".ga_addtofavorite").on('click', function(){
 	ga('send', 'event', 'button', 'click', 'addtofavorite');	
 });
 
-
 	dataLayer.push({
 		'event': 'checkout',
 		  'ecommerce': {
@@ -24,14 +23,14 @@ $(".ga_addtofavorite").on('click', function(){
 		    'checkout': {
 		     'actionField': {'step': 2}
 		      'products': [
-   		          	           	       {
-    		        'name': '洛杉矶比佛利山庄游 寻访国际巨星豪宅(自由行3460)USWest',
-    		        'id': '403460',
-    		        'price': '60.00',
-    		        'brand': 52,
-    		        'category': 'Paypal',
-    		        'quantity': 1,
-    	       }    	           	           	       ]
+   		      {                            // List of productFieldObjects.
+   			        'name': '美东四城豪华六日 年度爆款 大瀑布游船(旅行团216)USEast',     // Name or ID is required.
+   			        'id': '216',
+   			        'price': '770.00',
+   			        'brand': 20,
+   			        'category': 'Paypal',
+   			        'quantity': 1,
+    	       },    	           	           	           	           	       ]
 		    }
 		  }
 		});
