@@ -1,0 +1,80 @@
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N2B2VX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N2B2VX');</script>
+<!-- End Google Tag Manager -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-2648806-1', 'lulutrip.com');
+
+$(".ga_addtofavorite").on('click', function(){
+	ga('send', 'event', 'button', 'click', 'addtofavorite');	
+});
+
+	dataLayer.push({
+		  'ecommerce': {
+		    'currencyCode': 'USD',                       // Local currency is optional.
+		    'impressions': [
+		     {
+		       'name': '美东四城豪华六日 年度爆款 大瀑布游船(旅行团216)',       // Name or ID is required.
+		       'id': '216',
+		       'price': '210',
+		       'brand': '20',
+		       'category': 'USEast'
+		     }]
+		  }
+	});
+	
+	/*
+	ga('require', 'ec');ga('set', '&cu', 'USD');
+	ga('ec:addProduct', {
+		'id': '216',
+		'name': '美东四城豪华六日 年度爆款 大瀑布游船(旅行团216)',
+		'category': 'USEast',
+		'brand': '20'
+	});
+	ga('ec:setAction', 'detail');
+	ga('set','dimension2','NYC');
+	ga('set','dimension3','searchresults');
+	ga('set','dimension4','210'); //
+	ga('set','dimension5','NYC/BOS');	
+	ga('set','dimension6','216');
+	ga('set','dimension5','210');
+	ga('set','dimension5','searchresults');
+	ga('send', 'pageview'); 
+	*/
+	function ga_addtocart_tour() {
+		var person_num = parseInt($("#c_adult_num").html()) + parseInt($("#c_child_num").html());
+		dataLayer.push({
+		  'event': 'addToCart',
+		  'ecommerce': {
+		    'currencyCode': 'USD',
+		    'add': {
+		      'products': [{
+		        'name': '美东四城豪华六日 年度爆款 大瀑布游船(旅行团216)',
+		        'id': '216',
+		        'price': '210',
+		        'brand': '20',
+		        'category': 'USEast',
+		        'quantity': person_num
+		       }]
+		    }
+		  }
+		});
+		/*
+		ga('ec:addProduct', {
+		'id': '216',
+		'name': '美东四城豪华六日 年度爆款 大瀑布游船(旅行团216)',
+		'category': 'USEast',
+		'price': '210',
+		'brand': '20'
+		});
+		ga('ec:setAction', 'add');
+		ga('send', 'event', 'UX', 'click', 'add to cart');
+		*/
+	}
