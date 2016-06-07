@@ -3,19 +3,11 @@ window.dataLayer = window.dataLayer || [];
 dataLayer.push({
 'event': 'checkout',
   'ecommerce': {
-  'currencyCode': 'USD',
+    'currencyCode': 'USD',
     'checkout': {
-     'actionField': {'step': 1},
-      'products': [
-                        {
-        'name': 'Goggle Rental for Skiers and Snowboarders',
-        'id': '406816',
-        'price': '5',
-        'brand': '52',
-        'category': 'CA',
-        'quantity': 1,
-        },
-                      {}]
+     'actionField': {'step': 2},
+      "products": [
+            {}]
     }
   }
 });
